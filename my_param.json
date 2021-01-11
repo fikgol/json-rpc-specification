@@ -1,35 +1,36 @@
-"schema": {
-    "title": "MyParam",
-    "type": "object",
-    "required": [
-	"my_bool",
-	"my_int",
-	"my_type"
-    ],
-    "properties": {
-	"my_bool": {
-            "type": "boolean"
-	},
-	"my_int": {
-            "type": "integer",
-            "format": "int32"
-	},
-	"my_type": {
-            "$ref": "#/definitions/MyType"
-	}
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MyParam",
+  "type": "object",
+  "required": [
+    "my_bool",
+    "my_int",
+    "my_type"
+  ],
+  "properties": {
+    "my_bool": {
+      "type": "boolean"
     },
-    "definitions": {
-	"MyType": {
-            "type": "object",
-            "required": [
-		"my_int"
-            ],
-            "properties": {
-		"my_int": {
-		    "type": "integer",
-		    "format": "int32"
-		}
-            }
-	}
+    "my_int": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "my_type": {
+      "$ref": "#/definitions/MyType"
     }
+  },
+  "definitions": {
+    "MyType": {
+      "type": "object",
+      "required": [
+        "my_int"
+      ],
+      "properties": {
+        "my_int": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    }
+  }
 }
